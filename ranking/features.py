@@ -288,6 +288,13 @@ class HotelFeatureExtractor:
         else:
             f["payment_options_count"] = 0
             f["accepts_user_currency"] = 0
+        
+        # Fallback: проверяем поле currency на верхнем уровне
+        if f["accepts_user_currency"] == 0 and self.user_context:
+            user_curr = self.user_context.get("preferred_currency", "").upper()
+            hotel_curr = hotel.get("currency", "").upper()
+            if user_curr and hotel_curr == user_curr:
+                f["accepts_user_currency"] = 1
 
     def _text_features(self, h: dict, f: dict) -> None:
         desc = h.get("description") or ""

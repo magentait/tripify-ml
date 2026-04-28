@@ -75,11 +75,7 @@
     "checkin_after_hour",
     "checkout_before_hour",
     "stay_window_hours",
-    "accepts_cash",
-    "accepts_card",
-    "cash_currencies_count",
-    "card_types_count",
-    "payment_flexibility",
+    "payment_options_count",
     "accepts_user_currency",
     "description_length",
     "has_description",
@@ -117,5 +113,5 @@
     "verbose": -1,
     "lambdarank_truncation_level": 20
   },
-  "best_iteration": 240
+  "best_iteration": 262
 }
