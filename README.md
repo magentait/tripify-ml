@@ -7,7 +7,7 @@
 python -m venv venv
 source venv/bin/activate
 
-pip install -r ranking/requirements.txt
+pip install -r requirements.txt
 
 # macOS Apple Silicon — дополнительно:
 brew install libomp
