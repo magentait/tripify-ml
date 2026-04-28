@@ -8,7 +8,6 @@ python -m venv venv
 source venv/bin/activate
 
 pip install -r requirements.txt
-pip install -r requirements.txt
 
 # macOS Apple Silicon — дополнительно:
 brew install libomp
@@ -53,7 +52,7 @@ python build_search_index.py
 
 > При первом запуске скачивается модель эмбеддингов (~120–500 МБ в зависимости от выбранной в `search/embeddings.py`).
 >
-> Если HuggingFace недоступен напрямую, используй зеркало:
+> Если HuggingFace недоступен напрямую, используйте зеркало:
 > ```bash
 > export HF_ENDPOINT=https://hf-mirror.com
 > python build_search_index.py
